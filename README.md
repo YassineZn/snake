@@ -1,2 +1,2 @@
 # snake
-yassinezn.github.io/snake
+https://yassinezn.github.io/snake/
