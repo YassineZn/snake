@@ -5,9 +5,11 @@ function showGrid()
             for(let j = 0; j < len; j++)
             {
                 textAlign(CENTER, CENTER);
-                textSize(100)
+                textSize(50)
                 fill(45)
-                text("AI will be avialble soon(PC only)", windowWidth/2, windowHeight/2)
+                textFont("sans-serif")
+                text("AI will be available soon(PC only)", windowWidth/2, windowHeight/2)
+                
                 fill(20, 20 ,20)
                 rectMode(CORNER)
                 noStroke()

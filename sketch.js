@@ -3,7 +3,7 @@ let w = 50
 let snake
 let x,y, i
 function setup() {
-	let canvas = createCanvas(windowWidth, windowHeight);
+	createCanvas(windowWidth, windowHeight);
 	len = windowWidth/w
 	//canvas.center()
 	// put setup code here
@@ -19,8 +19,6 @@ function draw() {
 	food.show()
 	snake.show()
 	snake.move()
-	let body = select("body")
-	body.style("overflow", "hidden")
 
 
 	let is_eaten = snake.x == food.x && snake.y == food.y
@@ -36,11 +34,6 @@ function draw() {
 		food = new Food()
 	}
 
-}
-
-function plus()
-{
-	snake.x += 1
 }
 
 function keyPressed()
@@ -62,3 +55,10 @@ function keyPressed()
 
 
 const equals = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+
+//Reset Canvas whenever screen width changes
+function windowResized() {
+	resizeCanvas(windowWidth, windowHeight);
+	len = windowWidth/w
+
+  }
